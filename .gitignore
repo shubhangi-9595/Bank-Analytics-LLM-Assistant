@@ -1,0 +1,27 @@
+# Data is downloaded, never committed
+/data/
+*.sqlite
+*.csv
+!tests/fixtures/*.csv
+*.zip
+
+# Generated reports (CI regenerates them). Predictions in evals/predictions/ ARE committed.
+evals/reports/
+
+# Caches and environments
+.cache/
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+
+# Secrets
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+README.md
+docs/GIT_PLAN.md

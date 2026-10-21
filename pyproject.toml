@@ -1,0 +1,34 @@
+[project]
+name = "bank-analytics-assistant"
+version = "0.1.0"
+description = "LLM assistant over a real Czech bank database: text-to-SQL with RAG over a data dictionary, a loan default model, guardrails, and evaluation on the BIRD benchmark."
+requires-python = ">=3.10"
+dependencies = [
+    "sqlglot>=25",
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "joblib>=1.3",
+    "rank-bm25>=0.2.2",
+    "openai>=1.40",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+local-embeddings = ["sentence-transformers>=3.0"]
+app = ["streamlit>=1.36"]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bank_assistant = ["knowledge/*.md"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
