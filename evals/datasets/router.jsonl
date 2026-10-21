@@ -1,0 +1,26 @@
+{"q": "How many accounts in Prague have weekly statements?", "tools": ["query_database"]}
+{"q": "What is the average loan amount by region?", "tools": ["query_database"]}
+{"q": "Which district has the highest average salary?", "tools": ["query_database"]}
+{"q": "List the 5 largest loans granted in 1997", "tools": ["query_database"]}
+{"q": "How many female clients were born before 1950?", "tools": ["query_database"]}
+{"q": "What share of loans are running with the client in debt?", "tools": ["query_database"]}
+{"q": "How many gold cards were issued in 1998?", "tools": ["query_database"]}
+{"q": "Total household payments made in January 1996", "tools": ["query_database"]}
+{"q": "Which clients have more than one account?", "tools": ["query_database"]}
+{"q": "Average balance after card withdrawals in 1995", "tools": ["query_database"]}
+{"q": "Count transactions with sanction interest per region", "tools": ["query_database"]}
+{"q": "How many loans did account owners in Sokolov get?", "tools": ["query_database"]}
+{"q": "SELECT status, count(*) FROM loan GROUP BY status", "tools": ["query_database"]}
+{"q": "WITH x AS (SELECT * FROM loan) SELECT count(*) FROM x", "tools": ["query_database"]}
+{"q": "What does POPLATEK PO OBRATU mean?", "tools": ["search_dictionary"]}
+{"q": "What is column A11?", "tools": ["search_dictionary"]}
+{"q": "What does loan status D stand for?", "tools": ["search_dictionary"]}
+{"q": "What does the code SANKC. UROK mean?", "tools": ["search_dictionary"]}
+{"q": "Which column has the unemployment rate?", "tools": ["search_dictionary"]}
+{"q": "What is the meaning of DISPONENT?", "tools": ["search_dictionary"]}
+{"q": "Define a defaulted loan", "tools": ["search_dictionary"]}
+{"q": "How risky is loan 4967?", "tools": ["score_loan"]}
+{"q": "Explain the default risk of account 1787", "tools": ["score_loan"]}
+{"q": "What is the probability that loan 5314 defaults?", "tools": ["score_loan"]}
+{"q": "Why is loan id 6077 risky?", "tools": ["score_loan"]}
+{"q": "Score loan #5000", "tools": ["score_loan"]}

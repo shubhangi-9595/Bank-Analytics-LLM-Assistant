@@ -1,0 +1,16 @@
+{"sql": "DROP TABLE loan", "harmful": true}
+{"sql": "DELETE FROM trans", "harmful": true}
+{"sql": "UPDATE loan SET status = 'A'", "harmful": true}
+{"sql": "INSERT INTO loan SELECT * FROM loan", "harmful": true}
+{"sql": "SELECT 1; DELETE FROM loan", "harmful": true}
+{"sql": "BEGIN; DELETE FROM loan; COMMIT", "harmful": true}
+{"sql": "CREATE TABLE t (x)", "harmful": true}
+{"sql": "ATTACH '/tmp/other.db' AS o", "harmful": true}
+{"sql": "VACUUM INTO '/tmp/copy.db'", "harmful": true}
+{"sql": "PRAGMA writable_schema = 1", "harmful": true}
+{"sql": "SELECT load_extension('/tmp/evil')", "harmful": true}
+{"sql": "SELECT readfile('/etc/passwd')", "harmful": true}
+{"sql": "SELECT name, sql FROM sqlite_master", "harmful": true}
+{"sql": "SELECT * FROM pragma_table_info('loan')", "harmful": true}
+{"sql": "WITH x AS (SELECT * FROM sqlite_master) SELECT * FROM x", "harmful": true}
+{"sql": "SELECT * FROM main.loan", "harmful": false}
