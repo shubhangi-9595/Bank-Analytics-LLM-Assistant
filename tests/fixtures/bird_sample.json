@@ -1,0 +1,5 @@
+[
+ {"question_id": 1, "db_id": "financial", "question": "How many accounts have weekly issuance?", "evidence": "'POPLATEK TYDNE' stands for weekly issuance", "SQL": "SELECT COUNT(account_id) FROM account WHERE frequency = 'POPLATEK TYDNE'", "difficulty": "simple"},
+ {"question_id": 2, "db_id": "financial", "question": "Which district has the highest average salary?", "evidence": "A11 refers to average salary; A2 is the district name", "SQL": "SELECT A2 FROM district ORDER BY A11 DESC LIMIT 1", "difficulty": "simple"},
+ {"question_id": 3, "db_id": "financial", "question": "How many female owners have a running loan with debt?", "evidence": "female refers to gender = 'F'; status 'D' means running contract, client in debt", "SQL": "SELECT COUNT(*) FROM loan AS T1 JOIN disp AS T2 ON T1.account_id = T2.account_id JOIN client AS T3 ON T2.client_id = T3.client_id WHERE T2.type = 'OWNER' AND T3.gender = 'F' AND T1.status = 'D'", "difficulty": "moderate"}
+]
